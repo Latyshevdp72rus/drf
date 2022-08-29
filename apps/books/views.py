@@ -2,43 +2,38 @@ from rest_framework.response import Response
 
 from apps.books.models import PublishingHouse
 from apps.books.serialzers import PublishingHouseSerializer
+from django.shortcuts import get_object_or_404
+
 from rest_framework.mixins import CreateModelMixin
-from rest_framework.generics import ListAPIView, RetrieveAPIView,CreateAPIView,RetrieveUpdateDestroyAPIView
+from rest_framework.generics import ListAPIView, RetrieveAPIView, CreateAPIView, RetrieveUpdateDestroyAPIView
+from rest_framework.viewsets import ViewSet
 
 
+class PublishHouseAction(ViewSet):
+    def list(self, request):
+        queryset = PublishingHouse.objects.all()
+        serializer = PublishingHouseSerializer(queryset, many=True)
+        return Response(serializer.data)
 
-class PublishingHouseAction(CreateAPIView):
-    queryset = PublishingHouse.objects.all()
-    serializer_class = PublishingHouseSerializer
+    def create(self, request, pk):
+        queryset = PublishingHouse.objects.all()
+        handler = get_object_or_404(queryset, pk=pk)
+        serializer = PublishingHouseSerializer(handler, many=True)
+        return Response(serializer.data)
 
-
-class PubViewDetail(RetrieveUpdateDestroyAPIView):
-    queryset = PublishingHouse.objects.all()
-    serializer_class = PublishingHouseSerializer
-
-
-class PublishingHouseAction(CreateModelMixin, ListAPIView):
-    queryset = PublishingHouse.objects.all()
-    serializer_class = PublishingHouseSerializer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# class PublishingHouseAction(CreateAPIView):
+#     queryset = PublishingHouse.objects.all()
+#     serializer_class = PublishingHouseSerializer
+#
+#
+# class PubViewDetail(RetrieveUpdateDestroyAPIView):
+#     queryset = PublishingHouse.objects.all()
+#     serializer_class = PublishingHouseSerializer
+#
+#
+# class PublishingHouseAction(CreateModelMixin, ListAPIView):
+#     queryset = PublishingHouse.objects.all()
+#     serializer_class = PublishingHouseSerializer
 
 
 # from rest_framework import status
@@ -52,13 +47,12 @@ class PublishingHouseAction(CreateModelMixin, ListAPIView):
 
 #     def get_queryset(self):
 #         pass
-        # 1 Способ
-        # queryset = PublishingHouse.objects.exclude(pk=1)
-        # return PublishingHouse.objects.exclude(pk=1)
-        # 2 способ
-        # filter_value = self.request.get('value')
-        # return PublishingHouse.objects.exclude(pk=1)
-
+# 1 Способ
+# queryset = PublishingHouse.objects.exclude(pk=1)
+# return PublishingHouse.objects.exclude(pk=1)
+# 2 способ
+# filter_value = self.request.get('value')
+# return PublishingHouse.objects.exclude(pk=1)
 
 
 # class PublishingHouseAPIView(APIView):

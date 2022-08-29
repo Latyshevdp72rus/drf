@@ -1,9 +1,13 @@
 from django.urls import path, include
-from apps.books.views import PubViewDetail,PublishingHouseAction
+from apps.books.views import PublishHouseAction
+
+    # PubViewDetail,PublishingHouseAction
 
 urlpatterns = [
-    path('publishing_house/', PublishingHouseAction.as_view(),
-    path('publishing_house/<int:pk>', PubViewDetail.as_view())),
+    path('publishing_house/', PublishHouseAction.as_view()),
+
+    # path('publishing_house/', PublishingHouseAction.as_view(),
+    # path('publishing_house/<int:pk>', PubViewDetail.as_view())),
 ]
 
     # PublishingHouseAction
