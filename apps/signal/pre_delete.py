@@ -3,24 +3,24 @@ from django.dispatch import receiver
 from apps.books.models import Book, Author, PublishingHouse
 import logging
 
+logging.basicConfig(filename='apps/signal/delete.log', format='%(filename)s: %(message)s',
+                    level=logging.warning)
+
 
 # КНИГИ
 @receiver(pre_delete, sender=Book)
-def delete_book_log(sender, instance, deleted, **kwargs):
-    if deleted:
-        logging.warning(f"В таблице Book, произошло удаление записи: {instance.book_name} ")
+def delete_book_log(sender, instance, **kwargs):
+    logging.warning(f'Table the "Book", entry has been deleted: "{instance.book_name}" ')
 
 
 # Публикация
 @receiver(pre_delete, sender=PublishingHouse)
-def delete_publishing_house_log(sender, instance, deleted, **kwargs):
-    if deleted:
-        logging.warning(f"В таблице PublishingHouse, произошло удаление записи: {instance.publishing_house_name}")
+def delete_publishing_house_log(sender, instance,  **kwargs):
+    logging.warning(f'Table the "PublishingHouse",entry has been deleted: "{instance.publishing_house_name}"')
 
 
 # Авторыы
 @receiver(pre_delete, sender=Author)
-def delete_author_log(sender, instance, deleted, **kwargs):
-    if deleted:
-        logging.warning(
-            f"В таблице Author, произошло удаление записи: {instance.first_name} {instance.last_name} {instance.fathername}")
+def delete_author_log(sender, instance,  **kwargs):
+    logging.warning(
+            f'Table the "Author", entry has been deleted: "{instance.first_name} {instance.last_name} {instance.fathername}"')
