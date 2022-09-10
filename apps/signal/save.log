@@ -1,8 +1,0 @@
-INFO:django.utils.autoreload:C:\drf\apps\signal\pre_delete.py changed, reloading.
-INFO:django.utils.autoreload:C:\drf\apps\signal\pre_delete.py changed, reloading.
-WARNING:root:Table the "Author", entry has been deleted: "Василий Егоров Петрович"
-INFO:django.utils.autoreload:C:\drf\apps\signal\pre_delete.py changed, reloading.
-WARNING:root:Table the "PublishingHouse",entry has been deleted: "Арка"
-WARNING:root:Table the "PublishingHouse",entry has been deleted: "АКВИЛЕГИЯ-М"
-INFO:django.utils.autoreload:C:\drf\apps\signal\pre_delete.py changed, reloading.
-WARNING:root:Запись "Книгогид" было изменено! на "Книгогид2"
