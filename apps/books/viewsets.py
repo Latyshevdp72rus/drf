@@ -1,4 +1,4 @@
-from apps.books.serializers import *
+from apps.books.serializers import AuthorSerializer,BookSerializer,PublishingHouseSerializer
 from apps.books.models import Author, PublishingHouse, Book
 from rest_framework import viewsets
 

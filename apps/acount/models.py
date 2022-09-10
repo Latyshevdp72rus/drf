@@ -45,13 +45,11 @@ class UserManager(BaseUserManager):
 
 
 class User(AbstractBaseUser, PermissionsMixin):
-
     ROLE = [
         (Role.USER, Role.USER),
         (Role.ADMIN, Role.ADMIN),
         (Role.SUBSCRIPTION, Role.SUBSCRIPTION),
     ]
-
     email = models.EmailField(
         db_index=True,
         validators=[validators.validate_email],
@@ -60,22 +58,18 @@ class User(AbstractBaseUser, PermissionsMixin):
         null=False,
         verbose_name='email'
     )
-
     avatar = models.ImageField(
         upload_to='photos/%y/%m/%d',
         null=True,
         blank=True,
         verbose_name='изображение'
     )
-
     first_name = models.CharField(
         max_length=100, blank=True, null=True, verbose_name='имя'
     )
-
     last_name = models.CharField(
         max_length=100, blank=True, null=True, verbose_name='фамилия'
     )
-
     role = models.CharField(
         choices=ROLE,
         default="user",
@@ -84,7 +78,6 @@ class User(AbstractBaseUser, PermissionsMixin):
         blank=False,
         verbose_name="роль"
     )
-
     date_create = models.DateTimeField(auto_now_add=True, verbose_name='дата регистрации')
     is_staff = models.BooleanField(default=False, verbose_name='персонал')
     is_active = models.BooleanField(default=True, verbose_name='активный')

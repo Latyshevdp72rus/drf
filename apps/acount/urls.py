@@ -1,3 +1,6 @@
-from apps.acount.router import router as acount_router
+from django.urls import path
+from apps.acount.view import RegistrationAPIView
 
-urlpatterns = acount_router.urls
+urlpatterns = [
+    path('users/', RegistrationAPIView.as_view()),
+]
