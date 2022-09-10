@@ -5,19 +5,22 @@ import logging
 
 
 @receiver(post_save, sender=Book)
-def log_book_save(sender, instance, created, **kwargs):
+def book_save_log(sender, instance, created, **kwargs):
     if created:
         logging.warning(f"В таблице Book, появилась новая запись  {instance.book_name}")
 
 
 @receiver(post_save, sender=PublishingHouse)
-def log_publish_house_save(sender, instance, created, **kwargs):
+def publish_house_save_log(sender, instance, created, **kwargs):
     if created:
         logging.warning(f"В таблице PublishingHouse, появилась новая запись  {instance.publishing_house_name} ")
 
 
 @receiver(post_save, sender=Author)
-def log_author_save(sender, instance, created, **kwargs):
+def author_save_log(sender, instance, created, **kwargs):
     if created:
-        logging.warning(f"В таблице Author, появилась новая запись {instance.first_name} {instance.last_name} {instance.fathername}")
+        logging.warning(
+            f"В таблице Author, появилась новая запись {instance.first_name} {instance.last_name} {instance.fathername}")
+
+
 
