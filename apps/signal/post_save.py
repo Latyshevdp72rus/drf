@@ -6,16 +6,18 @@ from apps.books.models import Book, Author, PublishingHouse
 @receiver(post_save, sender=Book)
 def log_book_save(sender, instance, created, **kwargs):
     if created:
-        print(f"Book {instance.book_name} is created")
+        print(f"В таблице Book, появилась новая запись {instance.book_name} и она успешно создана")
 
 
 @receiver(post_save, sender=Author)
-def log_book_save(sender, instance, created, **kwargs):
+def log_author_save(sender, instance, created, **kwargs):
     if created:
-        print(f"Author {instance.first_name}{instance.last_name}{instance.fathername} is created")
+        print(f"В таблице Author, появилась новая запись {instance.first_name} {instance.last_name} \
+                {instance.fathername} и она успешно создана")
 
 
 @receiver(post_save, sender=PublishingHouse)
-def log_book_save(sender, instance, created, **kwargs):
+def log_publish_house_save(sender, instance, created, **kwargs):
     if created:
-        print(f"PublishingHouse {instance.publishing_house_name} is created")
+        print(f"В таблице PublishingHouse, появилась новая запись  {instance.publishing_house_name} \
+            и она успешно создана")
