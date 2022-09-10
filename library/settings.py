@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-cg(2(xm=*9$@*+_odnz2!ji(^o@ib7n@@4#^&fhj^-3#jsjrzy
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-APPEND_SLASH =True
+APPEND_SLASH = True
 
 ALLOWED_HOSTS = []
 
@@ -37,9 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
+    'django.contrib.staticfiles',  # required for serving swagger ui's css/js files
+    'drf_yasg',
     'rest_framework',
     'apps.books.apps.BooksConfig',
+    'apps.acount.apps.AcountConfig',
+
+
 ]
 
 MIDDLEWARE = [
@@ -79,14 +83,13 @@ WSGI_APPLICATION = 'library.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME':'library' ,
-        'USER':'postgres' ,
-        'PASSWORD':'33665511' ,
+        'NAME': 'library1',
+        'USER': 'postgres',
+        'PASSWORD': '33665511',
         'HOST': 'localhost',
         'PORT': 5432,
     },
 }
-
 
 
 # Password validation
@@ -106,6 +109,8 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+AUTH_USER_MODEL = 'acount.User'
 
 
 # Internationalization
