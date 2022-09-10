@@ -3,6 +3,7 @@ from django.dispatch import receiver
 from apps.books.models import Book, PublishingHouse, Author
 import logging
 
+logging.basicConfig(filename='apps/signal/update.log', level=logging.warning, encoding='cp1251')
 
 # КНИГИ
 @receiver(post_init, sender=Book)
@@ -16,7 +17,7 @@ def book_post_save_log(instance, **kwargs):
         logging.warning(f'Запись  "{instance.original_name}" было изменено! на "{instance.book_name}"')
 
 
-# Публикация
+# издательства
 @receiver(post_init, sender=PublishingHouse)
 def publish_house_post_init_log(instance, **kwargs):
     instance.original_name = instance.publishing_house_name

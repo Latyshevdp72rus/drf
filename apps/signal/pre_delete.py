@@ -3,8 +3,8 @@ from django.dispatch import receiver
 from apps.books.models import Book, Author, PublishingHouse
 import logging
 
-logging.basicConfig(filename='apps/signal/delete.log', format='%(filename)s: %(message)s',
-                    level=logging.warning)
+logging.basicConfig(filename='apps/signal/delete.log',
+                    level=logging.warning, encoding='cp1251')
 
 
 # КНИГИ
@@ -13,7 +13,7 @@ def delete_book_log(sender, instance, **kwargs):
     logging.warning(f'Table the "Book", entry has been deleted: "{instance.book_name}" ')
 
 
-# Публикация
+# издательства
 @receiver(pre_delete, sender=PublishingHouse)
 def delete_publishing_house_log(sender, instance,  **kwargs):
     logging.warning(f'Table the "PublishingHouse",entry has been deleted: "{instance.publishing_house_name}"')
