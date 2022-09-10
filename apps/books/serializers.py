@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from apps.books.models import *
-from ..signal.post_save import log_book_save, log_author_save, log_publish_house_save
-from ..signal.pre_delete import save_delete_log
+from apps.signal.post_save import log_book_save, log_author_save, log_publish_house_save
+from apps.signal.pre_delete import delete_book_log, delete_author_log
 
 
 class PublishingHouseSerializer(serializers.ModelSerializer):
