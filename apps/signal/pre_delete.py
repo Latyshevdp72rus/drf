@@ -3,8 +3,7 @@ from django.dispatch import receiver
 from apps.books.models import Book, Author, PublishingHouse
 import logging
 
-logging.basicConfig(filename='apps/signal/pre_delete.log',
-                    level=logging.warning, encoding='cp1251')
+logging.basicConfig(filename='apps/signal/pre_delete.log',  level=logging.warning, encoding='cp1251')
 
 
 # КНИГИ
