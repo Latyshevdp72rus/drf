@@ -1,0 +1,248 @@
+WARNING:root:Table the "PublishingHouse", new entry created:   АСТ-ПРЕСС
+WARNING:root:Table the "Author", new entry created: Василий Егоров Петрович
+
+INFO:django.utils.autoreload:C:\drf\apps\acount\viewsets.py changed, reloading.
+INFO:django.utils.autoreload:C:\drf\apps\acount\viewsets.py changed, reloading.
+INFO:django.utils.autoreload:C:\drf\apps\acount\viewsets.py changed, reloading.
+WARNING:django.request:Not Found: /
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /acount
+WARNING:django.request:Not Found: /acount/api/v2/user
+WARNING:django.request:Not Found: /acount/api/v2/user
+WARNING:django.request:Not Found: /acount/api/v2/user/User
+ERROR:django.request:Internal Server Error: /acount/api/v2/User/
+Traceback (most recent call last):
+  File "C:\drf\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\drf\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\drf\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\drf\venv\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\drf\venv\lib\site-packages\rest_framework\renderers.py", line 724, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "C:\drf\venv\lib\site-packages\rest_framework\renderers.py", line 680, in get_context
+    'content': self.get_content(renderer, data, accepted_media_type, renderer_context),
+  File "C:\drf\venv\lib\site-packages\rest_framework\renderers.py", line 413, in get_content
+    content = renderer.render(data, accepted_media_type, renderer_context)
+  File "C:\drf\venv\lib\site-packages\rest_framework\renderers.py", line 100, in render
+    ret = json.dumps(
+  File "C:\drf\venv\lib\site-packages\rest_framework\utils\json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "C:\Users\W01F\AppData\Local\Programs\Python\Python38\lib\json\__init__.py", line 234, in dumps
+    return cls(
+  File "C:\Users\W01F\AppData\Local\Programs\Python\Python38\lib\json\encoder.py", line 201, in encode
+    chunks = list(chunks)
+  File "C:\Users\W01F\AppData\Local\Programs\Python\Python38\lib\json\encoder.py", line 429, in _iterencode
+    yield from _iterencode_list(o, _current_indent_level)
+  File "C:\Users\W01F\AppData\Local\Programs\Python\Python38\lib\json\encoder.py", line 325, in _iterencode_list
+    yield from chunks
+  File "C:\Users\W01F\AppData\Local\Programs\Python\Python38\lib\json\encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "C:\Users\W01F\AppData\Local\Programs\Python\Python38\lib\json\encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "C:\drf\venv\lib\site-packages\rest_framework\utils\encoders.py", line 67, in default
+    return super().default(obj)
+  File "C:\Users\W01F\AppData\Local\Programs\Python\Python38\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Role is not JSON serializable
+WARNING:django.request:Not Found: /acount/api/v2/User/
+WARNING:django.request:Not Found: /acount/api/v/User/
+WARNING:django.request:Not Found: /acount/api/v2/User/
+INFO:django.utils.autoreload:C:\drf\apps\acount\router.py changed, reloading.
+INFO:django.utils.autoreload:C:\drf\apps\acount\viewsets.py changed, reloading.
+INFO:django.utils.autoreload:C:\drf\apps\acount\viewsets.py changed, reloading.
+INFO:django.utils.autoreload:C:\drf\apps\acount\viewsets.py changed, reloading.
+INFO:django.utils.autoreload:C:\drf\apps\acount\viewsets.py changed, reloading.
+INFO:django.utils.autoreload:C:\drf\apps\acount\viewsets.py changed, reloading.
+INFO:django.utils.autoreload:C:\drf\apps\acount\router.py changed, reloading.
+INFO:django.utils.autoreload:C:\drf\apps\acount\serializer.py changed, reloading.
+INFO:django.utils.autoreload:C:\drf\apps\acount\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\drf\apps\acount\urls.py changed, reloading.
+WARNING:django.request:Method Not Allowed: /acount/users/
+INFO:django.utils.autoreload:C:\drf\apps\acount\urls.py changed, reloading.
+INFO:django.utils.autoreload:C:\drf\apps\acount\urls.py changed, reloading.
+WARNING:django.request:Method Not Allowed: /acount/users/
+WARNING:django.request:Bad Request: /acount/users/
+WARNING:django.request:Bad Request: /acount/users/
+WARNING:django.request:Bad Request: /acount/users/
+WARNING:django.request:Bad Request: /acount/users/
+INFO:django.utils.autoreload:C:\drf\apps\books\serializers.py changed, reloading.
+WARNING:django.request:Bad Request: /acount/users/
+WARNING:django.request:Bad Request: /acount/users/
+WARNING:django.request:Bad Request: /acount/users/
+WARNING:django.request:Not Found: /acount/user
+ERROR:django.request:Internal Server Error: /acount/users/
+Traceback (most recent call last):
+  File "C:\drf\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\drf\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\drf\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\drf\venv\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\drf\venv\lib\site-packages\rest_framework\renderers.py", line 724, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "C:\drf\venv\lib\site-packages\rest_framework\renderers.py", line 696, in get_context
+    'post_form': self.get_rendered_html_form(data, view, 'POST', request),
+  File "C:\drf\venv\lib\site-packages\rest_framework\renderers.py", line 511, in get_rendered_html_form
+    return self.render_form_for_serializer(serializer)
+  File "C:\drf\venv\lib\site-packages\rest_framework\renderers.py", line 519, in render_form_for_serializer
+    serializer.data,
+  File "C:\drf\venv\lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+  File "C:\drf\venv\lib\site-packages\rest_framework\serializers.py", line 257, in data
+    self._data = self.get_initial()
+  File "C:\drf\venv\lib\site-packages\rest_framework\serializers.py", line 405, in get_initial
+    for field in self.fields.values()
+  File "C:\drf\venv\lib\site-packages\django\utils\functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\drf\venv\lib\site-packages\rest_framework\serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "C:\drf\venv\lib\site-packages\rest_framework\serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "C:\drf\venv\lib\site-packages\rest_framework\serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "C:\drf\venv\lib\site-packages\rest_framework\serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `username` is not valid for model `User`.
+INFO:django.utils.autoreload:C:\drf\apps\acount\urls.py changed, reloading.
+WARNING:django.request:Not Found: /acount/users/
+WARNING:django.request:Not Found: /acount/users/
+INFO:django.utils.autoreload:C:\drf\apps\acount\serializer.py changed, reloading.
+INFO:django.utils.autoreload:C:\drf\apps\acount\serializer.py changed, reloading.
+WARNING:django.request:Not Found: /acount/users/
+WARNING:django.request:Not Found: /acount/users/
+WARNING:django.request:Not Found: /acount/users/
+WARNING:django.request:Not Found: /acount/users/
+WARNING:django.request:Not Found: /acount/users/
+INFO:django.utils.autoreload:C:\drf\apps\acount\serializer.py changed, reloading.
+WARNING:django.request:Not Found: /acount/users/
+WARNING:django.request:Not Found: /acount/users/
+INFO:django.utils.autoreload:C:\drf\apps\acount\urls.py changed, reloading.
+WARNING:django.request:Method Not Allowed: /acount/users/
+INFO:django.utils.autoreload:C:\drf\apps\acount\serializer.py changed, reloading.
+ERROR:django.request:Internal Server Error: /acount/users/
+Traceback (most recent call last):
+  File "C:\drf\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\drf\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\drf\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\drf\venv\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\drf\venv\lib\site-packages\rest_framework\renderers.py", line 724, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "C:\drf\venv\lib\site-packages\rest_framework\renderers.py", line 696, in get_context
+    'post_form': self.get_rendered_html_form(data, view, 'POST', request),
+  File "C:\drf\venv\lib\site-packages\rest_framework\renderers.py", line 511, in get_rendered_html_form
+    return self.render_form_for_serializer(serializer)
+  File "C:\drf\venv\lib\site-packages\rest_framework\renderers.py", line 519, in render_form_for_serializer
+    serializer.data,
+  File "C:\drf\venv\lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+  File "C:\drf\venv\lib\site-packages\rest_framework\serializers.py", line 257, in data
+    self._data = self.get_initial()
+  File "C:\drf\venv\lib\site-packages\rest_framework\serializers.py", line 405, in get_initial
+    for field in self.fields.values()
+  File "C:\drf\venv\lib\site-packages\django\utils\functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\drf\venv\lib\site-packages\rest_framework\serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "C:\drf\venv\lib\site-packages\rest_framework\serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "C:\drf\venv\lib\site-packages\rest_framework\serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "C:\drf\venv\lib\site-packages\rest_framework\serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `username` is not valid for model `User`.
+INFO:django.utils.autoreload:C:\drf\apps\acount\serializer.py changed, reloading.
+ERROR:django.request:Internal Server Error: /acount/users/
+Traceback (most recent call last):
+  File "C:\drf\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\drf\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\drf\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\drf\venv\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\drf\venv\lib\site-packages\rest_framework\renderers.py", line 724, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "C:\drf\venv\lib\site-packages\rest_framework\renderers.py", line 696, in get_context
+    'post_form': self.get_rendered_html_form(data, view, 'POST', request),
+  File "C:\drf\venv\lib\site-packages\rest_framework\renderers.py", line 511, in get_rendered_html_form
+    return self.render_form_for_serializer(serializer)
+  File "C:\drf\venv\lib\site-packages\rest_framework\renderers.py", line 519, in render_form_for_serializer
+    serializer.data,
+  File "C:\drf\venv\lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+  File "C:\drf\venv\lib\site-packages\rest_framework\serializers.py", line 257, in data
+    self._data = self.get_initial()
+  File "C:\drf\venv\lib\site-packages\rest_framework\serializers.py", line 405, in get_initial
+    for field in self.fields.values()
+  File "C:\drf\venv\lib\site-packages\django\utils\functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\drf\venv\lib\site-packages\rest_framework\serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "C:\drf\venv\lib\site-packages\rest_framework\serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "C:\drf\venv\lib\site-packages\rest_framework\serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "C:\drf\venv\lib\site-packages\rest_framework\serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `username` is not valid for model `User`.
+INFO:django.utils.autoreload:C:\drf\apps\acount\serializer.py changed, reloading.
+INFO:django.utils.autoreload:C:\drf\apps\acount\serializer.py changed, reloading.
+WARNING:django.request:Method Not Allowed: /acount/users/
+WARNING:django.request:Bad Request: /acount/users/
+WARNING:django.request:Bad Request: /acount/users/
+INFO:django.utils.autoreload:C:\drf\apps\acount\serializer.py changed, reloading.
+WARNING:django.request:Not Found: /
+WARNING:django.request:Not Found: /accounts/login/
+INFO:django.utils.autoreload:C:\drf\library\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\drf\library\settings.py changed, reloading.
+WARNING:django.request:Not Found: /books/
+WARNING:django.server:"GET /books/ HTTP/1.1" 404 2624
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 2585
+INFO:django.server:"GET /swagger HTTP/1.1" 301 0
+INFO:django.server:"GET /swagger/ HTTP/1.1" 200 2159
+INFO:django.server:"GET /static/drf-yasg/style.css HTTP/1.1" 200 1047
+INFO:django.server:"GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 200 143858
+INFO:django.server:"GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 200 1086481
+INFO:django.server:"GET /static/drf-yasg/insQ.min.js HTTP/1.1" 200 2093
+INFO:django.server:"GET /static/drf-yasg/immutable.min.js HTTP/1.1" 200 56904
+INFO:django.server:"GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 200 14964
+INFO:django.server:"GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 200 324275
+INFO:django.server:"GET /swagger/?format=openapi HTTP/1.1" 200 8660
+INFO:django.server:"GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 200 628
+WARNING:django.request:Bad Request: /acount/users/
+WARNING:django.server:"POST /acount/users/ HTTP/1.1" 400 115
+WARNING:django.request:Not Found: /
+WARNING:django.server:"GET / HTTP/1.1" 404 2534
+WARNING:django.request:Not Found: /books
+WARNING:django.server:"GET /books HTTP/1.1" 404 2567
+WARNING:django.request:Not Found: /qweqwew
+WARNING:django.server:"GET /qweqwew HTTP/1.1" 404 2573
+WARNING:django.request:Bad Request: /acount/users/
+WARNING:django.server:"POST /acount/users/ HTTP/1.1" 400 115
+INFO:django.server:"GET /swagger/ HTTP/1.1" 200 2159
+INFO:django.server:"GET /swagger/?format=openapi HTTP/1.1" 200 8660
+WARNING:django.request:Bad Request: /acount/users/
+WARNING:django.server:"POST /acount/users/ HTTP/1.1" 400 115
+WARNING:django.request:Not Found: /books
+WARNING:django.server:"GET /books HTTP/1.1" 404 2567
+INFO:django.server:"GET /swagger/ HTTP/1.1" 200 2159
+INFO:django.server:"GET /swagger/?format=openapi HTTP/1.1" 200 8660
+INFO:django.utils.autoreload:C:\drf\library\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\drf\library\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\drf\library\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\drf\library\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\drf\library\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\drf\library\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\drf\library\settings.py changed, reloading.
+INFO:django.utils.autoreload:C:\drf\library\settings.py changed, reloading.

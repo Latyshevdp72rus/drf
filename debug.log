@@ -1,0 +1,12 @@
+Not Found: /
+"GET / HTTP/1.1" 404 2534
+Not Found: /books
+"GET /books HTTP/1.1" 404 2567
+Not Found: /qweqwew
+"GET /qweqwew HTTP/1.1" 404 2573
+Bad Request: /acount/users/
+"POST /acount/users/ HTTP/1.1" 400 115
+Bad Request: /acount/users/
+"POST /acount/users/ HTTP/1.1" 400 115
+Not Found: /books
+"GET /books HTTP/1.1" 404 2567
