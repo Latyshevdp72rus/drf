@@ -4,4 +4,4 @@ import requests
 
 @app.task(bind=True, name='update_noveltles_set')
 def inform_new(*args, **kwargs):
-    print('В магазине появилась новинка')
+    print('in magaze')

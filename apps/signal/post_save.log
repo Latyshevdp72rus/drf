@@ -248,3 +248,17 @@ INFO:django.utils.autoreload:C:\drf\library\settings.py changed, reloading.
 INFO:django.utils.autoreload:C:\drf\library\settings.py changed, reloading.
 WARNING:django.request:Bad Request: /acount/users/
 WARNING:django.server:"POST /acount/users/ HTTP/1.1" 400 115
+WARNING:django.request:Not Found: /books
+WARNING:django.server:"GET /books HTTP/1.1" 404 2567
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.server:"GET /favicon.ico HTTP/1.1" 404 2585
+WARNING:django.request:Not Found: /books/swagger
+WARNING:django.server:"GET /books/swagger HTTP/1.1" 404 2645
+WARNING:django.request:Not Found: /
+WARNING:django.server:"GET / HTTP/1.1" 404 2534
+WARNING:django.request:Bad Request: /acount/users/
+WARNING:django.server:"POST /acount/users/ HTTP/1.1" 400 115
+WARNING:django.request:Bad Request: /acount/users/
+WARNING:django.server:"POST /acount/users/ HTTP/1.1" 400 115
+WARNING:django.request:Bad Request: /acount/users/
+WARNING:django.server:"POST /acount/users/ HTTP/1.1" 400 115
