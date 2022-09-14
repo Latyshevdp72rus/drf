@@ -1,9 +1,10 @@
 from django.shortcuts import get_object_or_404
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
-from apps.books.serializers import AuthorSerializer,BookSerializer,PublishingHouseSerializer
+from apps.books.serializers import AuthorSerializer, BookSerializer, PublishingHouseSerializer
 from apps.books.models import Author, PublishingHouse, Book
 from rest_framework import viewsets
+from apps.books.task import inform_new
 
 
 class PublishingHouseViewSet(viewsets.ModelViewSet):
@@ -33,5 +34,6 @@ class PublishHouseAction(ViewSet):
         serializer = PublishingHouseSerializer(handler, many=True)
         return Response(serializer.data)
 
-    def create(self,request):
-            pass
+    @inform_new
+    def create(self, request):
+        pass
