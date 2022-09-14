@@ -176,3 +176,9 @@ LOGGING = {
 #         },
 #     },
 # }
+
+
+# Celery Configuration Options
+CELERY_TIMEZONE = "Asia/Yekaterinburg"
+CELERY_TASK_TRACK_STARTED = True
+CELERY_TASK_TIME_LIMIT = 30 * 60
