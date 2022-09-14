@@ -10,3 +10,5 @@ Bad Request: /acount/users/
 "POST /acount/users/ HTTP/1.1" 400 115
 Not Found: /books
 "GET /books HTTP/1.1" 404 2567
+Bad Request: /acount/users/
+"POST /acount/users/ HTTP/1.1" 400 115

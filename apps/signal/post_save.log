@@ -246,3 +246,5 @@ INFO:django.utils.autoreload:C:\drf\library\settings.py changed, reloading.
 INFO:django.utils.autoreload:C:\drf\library\settings.py changed, reloading.
 INFO:django.utils.autoreload:C:\drf\library\settings.py changed, reloading.
 INFO:django.utils.autoreload:C:\drf\library\settings.py changed, reloading.
+WARNING:django.request:Bad Request: /acount/users/
+WARNING:django.server:"POST /acount/users/ HTTP/1.1" 400 115
