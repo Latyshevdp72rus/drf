@@ -26,3 +26,305 @@ Bad Request: /acount/users/
 "POST /acount/users/ HTTP/1.1" 400 115
 Bad Request: /acount/users/
 "POST /acount/users/ HTTP/1.1" 400 115
+Bad Request: /acount/users/
+"POST /acount/users/ HTTP/1.1" 400 115
+Internal Server Error: /books/api/v1/pub_house/
+Traceback (most recent call last):
+  File "C:\drf\venv\lib\site-packages\kombu\utils\functional.py", line 30, in __call__
+    return self.__value__
+AttributeError: 'ChannelPromise' object has no attribute '__value__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\drf\venv\lib\site-packages\kombu\connection.py", line 446, in _reraise_as_library_errors
+    yield
+  File "C:\drf\venv\lib\site-packages\kombu\connection.py", line 433, in _ensure_connection
+    return retry_over_time(
+  File "C:\drf\venv\lib\site-packages\kombu\utils\functional.py", line 312, in retry_over_time
+    return fun(*args, **kwargs)
+  File "C:\drf\venv\lib\site-packages\kombu\connection.py", line 877, in _connection_factory
+    self._connection = self._establish_connection()
+  File "C:\drf\venv\lib\site-packages\kombu\connection.py", line 812, in _establish_connection
+    conn = self.transport.establish_connection()
+  File "C:\drf\venv\lib\site-packages\kombu\transport\pyamqp.py", line 201, in establish_connection
+    conn.connect()
+  File "C:\drf\venv\lib\site-packages\amqp\connection.py", line 323, in connect
+    self.transport.connect()
+  File "C:\drf\venv\lib\site-packages\amqp\transport.py", line 129, in connect
+    self._connect(self.host, self.port, self.connect_timeout)
+  File "C:\drf\venv\lib\site-packages\amqp\transport.py", line 184, in _connect
+    self.sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\drf\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\drf\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\drf\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\drf\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\drf\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\drf\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\drf\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\drf\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\drf\apps\books\viewsets.py", line 26, in create
+    inform_new.delay()
+  File "C:\drf\venv\lib\site-packages\celery\app\task.py", line 425, in delay
+    return self.apply_async(args, kwargs)
+  File "C:\drf\venv\lib\site-packages\celery\app\task.py", line 575, in apply_async
+    return app.send_task(
+  File "C:\drf\venv\lib\site-packages\celery\app\base.py", line 788, in send_task
+    amqp.send_task_message(P, name, message, **options)
+  File "C:\drf\venv\lib\site-packages\celery\app\amqp.py", line 510, in send_task_message
+    ret = producer.publish(
+  File "C:\drf\venv\lib\site-packages\kombu\messaging.py", line 177, in publish
+    return _publish(
+  File "C:\drf\venv\lib\site-packages\kombu\connection.py", line 523, in _ensured
+    return fun(*args, **kwargs)
+  File "C:\drf\venv\lib\site-packages\kombu\messaging.py", line 186, in _publish
+    channel = self.channel
+  File "C:\drf\venv\lib\site-packages\kombu\messaging.py", line 209, in _get_channel
+    channel = self._channel = channel()
+  File "C:\drf\venv\lib\site-packages\kombu\utils\functional.py", line 32, in __call__
+    value = self.__value__ = self.__contract__()
+  File "C:\drf\venv\lib\site-packages\kombu\messaging.py", line 225, in <lambda>
+    channel = ChannelPromise(lambda: connection.default_channel)
+  File "C:\drf\venv\lib\site-packages\kombu\connection.py", line 895, in default_channel
+    self._ensure_connection(**conn_opts)
+  File "C:\drf\venv\lib\site-packages\kombu\connection.py", line 433, in _ensure_connection
+    return retry_over_time(
+  File "C:\Users\W01F\AppData\Local\Programs\Python\Python38\lib\contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "C:\drf\venv\lib\site-packages\kombu\connection.py", line 450, in _reraise_as_library_errors
+    raise ConnectionError(str(exc)) from exc
+kombu.exceptions.OperationalError: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение
+"POST /books/api/v1/pub_house/ HTTP/1.1" 500 21101
+Internal Server Error: /books/api/v1/pub_house/
+Traceback (most recent call last):
+  File "C:\drf\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\drf\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\drf\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\drf\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\drf\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\drf\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\drf\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\drf\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: 'NoneType' object is not callable
+"POST /books/api/v1/pub_house/ HTTP/1.1" 500 17388
+Internal Server Error: /books/api/v1/pub_house/
+Traceback (most recent call last):
+  File "C:\drf\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\drf\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\drf\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\drf\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\drf\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\drf\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\drf\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\drf\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: 'NoneType' object is not callable
+"POST /books/api/v1/pub_house/ HTTP/1.1" 500 17388
+Not Found: /books/book/
+"POST /books/book/ HTTP/1.1" 404 2640
+Not Found: /news/
+"GET /news/ HTTP/1.1" 404 2460
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2478
+Internal Server Error: /books/api/v1/pub_house/
+Traceback (most recent call last):
+  File "C:\drf\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\drf\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\drf\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\drf\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\drf\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\drf\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\drf\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\drf\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: create() missing 1 required positional argument: 'pk'
+"POST /books/api/v1/pub_house/ HTTP/1.1" 500 17328
+Not Found: /pub_house
+"GET /pub_house HTTP/1.1" 404 2472
+Not Found: /api/v1/pub_house
+"GET /api/v1/pub_house HTTP/1.1" 404 2493
+Internal Server Error: /books/api/v1/pub_house/
+Traceback (most recent call last):
+  File "C:\drf\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\drf\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\drf\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\drf\venv\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\drf\venv\lib\site-packages\rest_framework\renderers.py", line 724, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "C:\drf\venv\lib\site-packages\rest_framework\renderers.py", line 655, in get_context
+    raw_data_post_form = self.get_raw_data_form(data, view, 'POST', request)
+  File "C:\drf\venv\lib\site-packages\rest_framework\renderers.py", line 554, in get_raw_data_form
+    serializer = view.get_serializer()
+  File "C:\drf\venv\lib\site-packages\rest_framework\generics.py", line 108, in get_serializer
+    serializer_class = self.get_serializer_class()
+  File "C:\drf\venv\lib\site-packages\rest_framework\generics.py", line 122, in get_serializer_class
+    assert self.serializer_class is not None, (
+AssertionError: 'PublishingHouseViewSet' should either include a `serializer_class` attribute, or override the `get_serializer_class()` method.
+"GET /books/api/v1/pub_house/ HTTP/1.1" 500 104334
+Internal Server Error: /books/api/v1/pub_house
+Traceback (most recent call last):
+  File "C:\drf\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\drf\venv\lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "C:\drf\venv\lib\site-packages\django\middleware\common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "C:\drf\venv\lib\site-packages\django\middleware\common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/books/api/v1/pub_house/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+"POST /books/api/v1/pub_house HTTP/1.1" 500 69302
+Internal Server Error: /books/api/v1/pub_house
+Traceback (most recent call last):
+  File "C:\drf\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\drf\venv\lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "C:\drf\venv\lib\site-packages\django\middleware\common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "C:\drf\venv\lib\site-packages\django\middleware\common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/books/api/v1/pub_house/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+"POST /books/api/v1/pub_house HTTP/1.1" 500 69302
+Internal Server Error: /books/api/v1/pub_house
+Traceback (most recent call last):
+  File "C:\drf\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\drf\venv\lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "C:\drf\venv\lib\site-packages\django\middleware\common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "C:\drf\venv\lib\site-packages\django\middleware\common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/books/api/v1/pub_house/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+"POST /books/api/v1/pub_house HTTP/1.1" 500 69302
+Internal Server Error: /books/api/v1/pub_house
+Traceback (most recent call last):
+  File "C:\drf\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\drf\venv\lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "C:\drf\venv\lib\site-packages\django\middleware\common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "C:\drf\venv\lib\site-packages\django\middleware\common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/books/api/v1/pub_house/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+"POST /books/api/v1/pub_house HTTP/1.1" 500 69302
+Internal Server Error: /books/api/v1/pub_house
+Traceback (most recent call last):
+  File "C:\drf\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\drf\venv\lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "C:\drf\venv\lib\site-packages\django\middleware\common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "C:\drf\venv\lib\site-packages\django\middleware\common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/books/api/v1/pub_house/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+"POST /books/api/v1/pub_house HTTP/1.1" 500 69302
+Internal Server Error: /books/api/v1/pub_house
+Traceback (most recent call last):
+  File "C:\drf\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\drf\venv\lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "C:\drf\venv\lib\site-packages\django\middleware\common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "C:\drf\venv\lib\site-packages\django\middleware\common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/books/api/v1/pub_house/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+"POST /books/api/v1/pub_house HTTP/1.1" 500 69302
+Internal Server Error: /books/api/v1/pub_house
+Traceback (most recent call last):
+  File "C:\drf\venv\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\drf\venv\lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "C:\drf\venv\lib\site-packages\django\middleware\common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "C:\drf\venv\lib\site-packages\django\middleware\common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/books/api/v1/pub_house/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+"POST /books/api/v1/pub_house HTTP/1.1" 500 69302
+Not Found: /books/api/v1/pub_house
+"POST /books/api/v1/pub_house HTTP/1.1" 404 6079
+Not Found: /books/api/v1/pub_house
+"POST /books/api/v1/pub_house HTTP/1.1" 404 6088
+Not Found: /books/api/v1/pub_house
+"GET /books/api/v1/pub_house HTTP/1.1" 404 6087
+Not Found: /books/api/v1/pub_house
+"GET /books/api/v1/pub_house HTTP/1.1" 404 6087
+Not Found: /books/api/v1/pub_house
+"POST /books/api/v1/pub_house HTTP/1.1" 404 6088
+Not Found: /books/api/v1/pub_house
+"POST /books/api/v1/pub_house HTTP/1.1" 404 6088
+Not Found: /books/api/v1/pub_house
+"POST /books/api/v1/pub_house HTTP/1.1" 404 6088
+Not Found: /books/api/v1/pub_house
+"POST /books/api/v1/pub_house HTTP/1.1" 404 6088
+Not Found: /books/api/v1/pub_house
+"POST /books/api/v1/pub_house HTTP/1.1" 404 6088
+Not Found: /books/api/v1/pub_house
+"POST /books/api/v1/pub_house HTTP/1.1" 404 6088
+Not Found: /books/api/v1/pub_house
+"POST /books/api/v1/pub_house HTTP/1.1" 404 6085
+Not Found: /books/api/v1/pub_house
+"POST /books/api/v1/pub_house HTTP/1.1" 404 6085
+Not Found: /books/api/v1/pub_house
+"POST /books/api/v1/pub_house HTTP/1.1" 404 6085
+Not Found: /books/api/v1/pub_house
+"GET /books/api/v1/pub_house HTTP/1.1" 404 6084
+Not Found: /books/api/v1/pub_house
+"GET /books/api/v1/pub_house HTTP/1.1" 404 6084
+Not Found: /books/api/v1/author
+"GET /books/api/v1/author HTTP/1.1" 404 4977
+Not Found: /books/api/v1/author
+"POST /books/api/v1/author HTTP/1.1" 404 4978
+Not Found: /books/api/v1/authors
+"POST /books/api/v1/authors HTTP/1.1" 404 4981
+Not Found: /books/api/v1/authors
+"GET /books/api/v1/authors HTTP/1.1" 404 4980
+Not Found: /books/api/v1/authors
+"GET /books/api/v1/authors HTTP/1.1" 404 4980
+Not Found: /books/api/v1/authors
+"GET /books/api/v1/authors HTTP/1.1" 404 4980
+Not Found: /books/api/v1/authors
+"GET /books/api/v1/authors HTTP/1.1" 404 4980

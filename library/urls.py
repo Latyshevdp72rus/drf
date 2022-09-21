@@ -5,7 +5,7 @@ from .yasg import urlpatterns as doc_urls
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('books/', include('apps.books.urls')),
-    path('acount/', include('apps.acount.urls')),
+    # path('acount/', include('apps.acount.urls')),
 
 ]
 
