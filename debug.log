@@ -328,3 +328,7 @@ Not Found: /books/api/v1/authors
 "GET /books/api/v1/authors HTTP/1.1" 404 4980
 Not Found: /books/api/v1/authors
 "GET /books/api/v1/authors HTTP/1.1" 404 4980
+Not Found: /news/
+"GET /news/ HTTP/1.1" 404 2460
+Bad Request: /books/api/v1/books//
+"POST /books/api/v1/books// HTTP/1.1" 400 125

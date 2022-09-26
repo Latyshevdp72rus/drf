@@ -7,10 +7,10 @@ from apps.books.models import Author, PublishingHouse, Book
 # from apps.books.task import inform_new
 
 
-# class PublishingHouseSerializer(serializers.ModelSerializer):
-#     class Meta:
-#         model = PublishingHouse
-#         fields = '__all__'
+class PublishingHouseSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PublishingHouse
+        fields = '__all__'
 
 
 
