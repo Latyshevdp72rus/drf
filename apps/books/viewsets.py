@@ -8,13 +8,13 @@ from apps.books.task import inform_new
 from rest_framework.views import APIView
 
 
-class AuthorViewSet(APIView):
-    def post(self, request):
-        data = request.data
-        author = Author(**data)
-        author.save()
-        inform_new.delay()
-        return Response(status=status.HTTP_202_ACCEPTED)
+# class AuthorViewSet(APIView):
+#     def post(self, request):
+#         data = request.data
+#         author = Author(**data)
+#         author.save()
+#         inform_new.delay()
+#         return Response(status=status.HTTP_202_ACCEPTED)
 
 
 class PublishingHouseViewSet(viewsets.ModelViewSet):
